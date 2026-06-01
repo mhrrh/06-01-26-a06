@@ -33,6 +33,8 @@
 
 // ------------- CODE -------------
 #include <iostream>
+#include <iomanip>
+#include <limits>
 
 using namespace std;
 
@@ -42,7 +44,43 @@ using namespace std;
 // Main function
 // https://en.cppreference.com/w/cpp/language/main_function.html
 int main(int argc, char* argv[]) {
-  cout << "Hello, World!" << endl;
+  const int COIN_END = 0;
+  const int NICKEL = 5;
+  const int DIME = 10;
+  const int QUARTER = 25;
+  const int ITEM_COST = 25;
+
+  int coin = 0;
+  int balance = 0;
+  int quantity = 0;
+  int totalCost = 0;
+  int change = 0;
+
+  char choice = ' ';
+  bool keepGoing = true;
+
+  cout << fixed << setprecision(2);
+  cout << "Welcome to my Coffee/Tea Vending Machine!" << endl << endl;
+  while (keepGoing) {
+    coin = -1;
+    do {
+      cout << "Enter coins - 5, 10, or 25 only: ";
+      cin >> coin;
+
+      while (cin.fail() ||
+            (coin != COIN_END && coin != NICKEL && coin != DIME && coin != QUARTER)){
+              cin.clear();
+              cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+              cout << "Invalid coin! Please enter 5, 10, or 25 only." << endl;
+              cout << "Enter coins - 5, 10, or 25 only: ";
+              cin >> coin;
+            }
+            if 
+    }
+  }
+
+
   return 0;
 }
 
