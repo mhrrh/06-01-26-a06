@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
             }
     } while (coin != COIN_END);
 
-    cout << end;
+    cout << endl;
     cout << "Your balance is $" << balance / 100.0 << endl << endl;
 
     cout << "Please pick an option ($0.25 each):" << endl;
